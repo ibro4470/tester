@@ -5,16 +5,16 @@ windows = Tk()
 windows.geometry("300x300")
 windows.title("EBIRA DICTIONARY")
 
-windows3 = Tk()
-windows3.geometry("300x300")
-windows3.title("EBIRA DICTIONARY")
+window = Tk()
+window.geometry("300x300")
+window.title("EBIRA DICTIONARY")
 
 
-entry_text = Entry(windows3)
+entry_text = Entry(window)
 entry_text.pack()
 
 result = StringVar()
-result_label = Label(windows3, textvariable=result)
+result_label = Label(window, textvariable=result)
 result_label.pack()
 
 ebira_dictionary ={
@@ -56,9 +56,9 @@ def check(word):
             print("Not found")
 
 
-ebira_button = Button(windows3)
+ebira_button = Button(window)
 ebira_button.config(text='check', command=lambda : check(entry_text.get().lower()))
 ebira_button.pack()
-windows3.mainloop()
+window.mainloop()
 
 windows.mainloop()
